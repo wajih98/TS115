@@ -105,8 +105,10 @@ end
 %ACP OK
 
 %% classifieur KNN
-% pas encore implementé
-
+%k_nn is a lil bit slow because getimg charges big variables ".mat" but
+%works like a charm
+%K=5 for example
+predict_class=k_nn(5, getimg('test2', 5,5),X_mean, U,L,n);
 %% classifieur gaussien
 
 x=data_trn(:,12); % faire varier l'image vectorisée en entrée, c renvoie la classe a laquelle appartient cette image
